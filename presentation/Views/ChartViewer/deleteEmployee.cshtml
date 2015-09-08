@@ -1,0 +1,41 @@
+﻿@model presentation.Models.ModelGroup
+ 
+@{
+    ViewBag.Title = "Delete Employee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<h2>Delete Employee</h2>
+
+ @if (Model != null && Model.ResponceMessage != null)
+ {
+     <div>  @Html.Label(Model.ResponceMessage) </div>  
+ }
+ 
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+ 
+    <fieldset>
+        <legend>Delete Employee</legend>
+         
+        <div class="editor-label">
+            @Html.LabelFor(model => model.del.EmployeeID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.del.EmployeeID, Model.del.allEmployees)
+            @Html.ValidationMessageFor(model => model.del.EmployeeID)
+        </div>
+        <p>
+            <input type="submit" value="Delete" />
+        </p>
+    </fieldset>
+}
+ 
+<div>
+    @Html.ActionLink("Chart Viewer", "Index", "ChartViewer", new { Area = "" }, null)
+</div>
+ 
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

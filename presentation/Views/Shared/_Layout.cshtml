@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+
+        <div class="container_12">
+        <div class="grid_12">
+                        <ul id="menu" > 
+                            <li>@Html.ActionLink("Home", "Index", "Home", new { Area = "" }, null)</li>
+                            <li>@Html.ActionLink("Chart Viewer", "Index", "ChartViewer", new { Area = ""}, null)</li>                              
+                        </ul>                             
+        </div>
+
+        <section id="main" class="grid_12">
+            @RenderBody()
+        </section>
+        @RenderSection("scripts", required: false)
+        </div>
+  
+</body>
+</html>

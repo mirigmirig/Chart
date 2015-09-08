@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/wcf/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects" />
+  <xs:complexType name="EmployeeDTOResponce">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BasicResponce">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects" minOccurs="0" name="AllEmployees" nillable="true" type="q1:ArrayOfEmployeeDTObject" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects" minOccurs="0" name="Employee" nillable="true" type="q2:EmployeeDTObject" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployeeDTOResponce" nillable="true" type="tns:EmployeeDTOResponce" />
+  <xs:complexType name="BasicResponce">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSucsessfull" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BasicResponce" nillable="true" type="tns:BasicResponce" />
+  <xs:complexType name="ChartDTOResponce">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BasicResponce">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects" minOccurs="0" name="Chart" nillable="true" type="q3:ArrayOfEmployeeDTObject" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects" minOccurs="0" name="VerboseChart" nillable="true" type="q4:ArrayOfEmployeeVerbDTObject" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChartDTOResponce" nillable="true" type="tns:ChartDTOResponce" />
+  <xs:complexType name="EmployeeRoleDTOResponce">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BasicResponce">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects" minOccurs="0" name="AllRoles" nillable="true" type="q5:ArrayOfEmployeeRoleDTObject" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects" minOccurs="0" name="Role" nillable="true" type="q6:EmployeeRoleDTObject" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployeeRoleDTOResponce" nillable="true" type="tns:EmployeeRoleDTOResponce" />
+  <xs:complexType name="OrganizationDTOResponce">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BasicResponce">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects" minOccurs="0" name="Organization" nillable="true" type="q7:OrganizationDTObject" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrganizationDTOResponce" nillable="true" type="tns:OrganizationDTOResponce" />
+</xs:schema>

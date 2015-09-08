@@ -1,0 +1,6 @@
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject.DataAccess\bin\Debug\OrganizationProject.DataAccess.dll.config
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject.DataAccess\bin\Debug\OrganizationProject.DataAccess.dll
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject.DataAccess\bin\Debug\OrganizationProject.DataAccess.pdb
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject.DataAccess\obj\Debug\OrganizationProject.DataAccess.dll
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject.DataAccess\obj\Debug\OrganizationProject.DataAccess.pdb
+C:\Users\Maria\Documents\Visual Studio 2010\Projects\OrganizationProject\OrganizationProject.DataAccess\obj\Debug\OrganizationProject.DataAccess.csprojResolveAssemblyReference.cache

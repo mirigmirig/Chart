@@ -1,0 +1,8 @@
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject_DataBase\sql\debug\OrganizationProject_DataBase_Script.PreDeployment.sql
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject_DataBase\sql\debug\OrganizationProject_DataBase_Script.PostDeployment.sql
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject_DataBase\sql\debug\OrganizationProject_DataBase_Database.sqlsettings
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject_DataBase\sql\debug\OrganizationProject_DataBase_Database.sqldeployment
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject_DataBase\sql\debug\OrganizationProject_DataBase_Database.sqlcmdvars
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject_DataBase\sql\debug\OrganizationProject_DataBase.deploymanifest
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject_DataBase\sql\debug\OrganizationProject_DataBase.dbschema
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject_DataBase\obj\Debug\OrganizationProject_DataBase.dbschema

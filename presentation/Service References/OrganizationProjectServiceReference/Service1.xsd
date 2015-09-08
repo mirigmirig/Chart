@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/wcf/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" />
+  <xs:import schemaLocation="http://localhost/wcf/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects" />
+  <xs:element name="getEmployeeByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmployeeByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" minOccurs="0" name="getEmployeeByIDResult" nillable="true" type="q1:EmployeeDTOResponce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllEmployees">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllEmployeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" minOccurs="0" name="getAllEmployeesResult" nillable="true" type="q2:EmployeeDTOResponce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteEmployeeByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteEmployeeByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" minOccurs="0" name="deleteEmployeeByIDResult" nillable="true" type="q3:BasicResponce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editManagerByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EmpoyeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="ManagerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editManagerByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" minOccurs="0" name="editManagerByIDResult" nillable="true" type="q4:BasicResponce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects" minOccurs="0" name="Employee" nillable="true" type="q5:EmployeeDTObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" minOccurs="0" name="addEmployeeResult" nillable="true" type="q6:BasicResponce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getChartScheme">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getChartSchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" minOccurs="0" name="getChartSchemeResult" nillable="true" type="q7:ChartDTOResponce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getVerboseChartScheme">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getVerboseChartSchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" minOccurs="0" name="getVerboseChartSchemeResult" nillable="true" type="q8:ChartDTOResponce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmployeeRoleByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmployeeRoleByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" minOccurs="0" name="getEmployeeRoleByIDResult" nillable="true" type="q9:EmployeeRoleDTOResponce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmployeeRoles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmployeeRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" minOccurs="0" name="getEmployeeRolesResult" nillable="true" type="q10:EmployeeRoleDTOResponce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOrganizationByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOrganizationByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/OrganizationProject.Service.ServiceObjects.Responces" minOccurs="0" name="getOrganizationByIDResult" nillable="true" type="q11:OrganizationDTOResponce" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

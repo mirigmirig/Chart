@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+    var requrl = '@Url.Action("viewChart", "ChartViewer")';
+    $(document).ready(function () {
+        $("#errorLabel").hide(); 
+        $('#ShowChart').click(function () {
+            $.ajax({
+                type: "POST",
+                url: requrl,
+                success: successFunction,
+                error:errorCreation,
+                dataType:"json"
+                });
+         });
+    });
+
+    successFunction = function (result) {
+        $('#chartScreen').empty();
+        if (result.ErrorMessage == null) {
+            $('#chartScreen').append(toHTML(JSON.parse(result.Data), ""));
+        }
+        else
+            errorCreation(result);
+    }
+
+    errorCreation =  function (result){
+        $("#errorLabel").text(result.ErrorMessage);   
+        $("#errorLabel").show();
+        }
+
+
+function toHTML(data, str) {
+
+    if (data == "undefined") return "";
+
+    for (var i = 0, n = data.length; i < n; i++) {
+        var employee = data[i];
+        str = str.concat( '<ul> <li>' + employee.FirstName + " " + employee.LastName + ": " + employee.EmployeeRole +'</li>');
+        str = toHTML(employee.ReportingManagees, str);
+        str = str.concat( '</ul>');
+        }
+        return str;
+}             
+</script>
+
+
+
+<h2 id="info">Chart Viewer</h2>
+<div class="grid_12">
+
+       <ul class="chartMenu">
+       <li><a href='@Url.Action("addEmployee", "ChartViewer")'>Add Employee</a></li>
+       <li><a href='@Url.Action("deleteEmployee", "ChartViewer")'>Delete Employee</a></li>   
+       <li><a href='@Url.Action("editEmployeeManager", "ChartViewer")'>Edit Manager</a></li>   
+       <li> <input type="submit" name="ShowChart" id="ShowChart" value="Push to see chart" /> </li> 
+         
+       </ul>   
+</div>
+<div class="grid_12 chartBox" id="chartScreen">
+</div>
+<label id="errorLabel"></label>
+
+

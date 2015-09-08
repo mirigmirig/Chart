@@ -1,0 +1,9 @@
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject.Service\bin\OrganizationProject.Service.dll
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject.Service\bin\OrganizationProject.Service.pdb
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject.Service\obj\Debug\OrganizationProject.Service.dll
+c:\users\maria\documents\visual studio 2010\Projects\OrganizationProject\OrganizationProject.Service\obj\Debug\OrganizationProject.Service.pdb
+C:\Users\Maria\Documents\Visual Studio 2010\Projects\OrganizationProject\OrganizationProject.Service\bin\OrganizationProject.BusinessLogic.dll
+C:\Users\Maria\Documents\Visual Studio 2010\Projects\OrganizationProject\OrganizationProject.Service\bin\OrganizationProject.DataAccess.dll
+C:\Users\Maria\Documents\Visual Studio 2010\Projects\OrganizationProject\OrganizationProject.Service\bin\OrganizationProject.BusinessLogic.pdb
+C:\Users\Maria\Documents\Visual Studio 2010\Projects\OrganizationProject\OrganizationProject.Service\bin\OrganizationProject.DataAccess.pdb
+C:\Users\Maria\Documents\Visual Studio 2010\Projects\OrganizationProject\OrganizationProject.Service\obj\Debug\OrganizationProject.Service.csprojResolveAssemblyReference.cache

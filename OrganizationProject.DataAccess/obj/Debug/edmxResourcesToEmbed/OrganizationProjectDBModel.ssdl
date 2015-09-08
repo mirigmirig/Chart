@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrganizationData_DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="OrganizationData_DBModelStoreContainer">
+    <EntitySet Name="EmployeeRoleData" EntityType="OrganizationData_DBModel.Store.EmployeeRoleData" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmployeesData" EntityType="OrganizationData_DBModel.Store.EmployeesData" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrganizationData" EntityType="OrganizationData_DBModel.Store.OrganizationData" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_EmployeesData_EmployeeRoleData" Association="OrganizationData_DBModel.Store.FK_EmployeesData_EmployeeRoleData">
+      <End Role="EmployeeRoleData" EntitySet="EmployeeRoleData" />
+      <End Role="EmployeesData" EntitySet="EmployeesData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeesData_EmployeesData" Association="OrganizationData_DBModel.Store.FK_EmployeesData_EmployeesData">
+      <End Role="EmployeesData" EntitySet="EmployeesData" />
+      <End Role="EmployeesData1" EntitySet="EmployeesData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeesData_OrganizationData" Association="OrganizationData_DBModel.Store.FK_EmployeesData_OrganizationData">
+      <End Role="OrganizationData" EntitySet="OrganizationData" />
+      <End Role="EmployeesData" EntitySet="EmployeesData" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="EmployeeRoleData">
+    <Key>
+      <PropertyRef Name="EmployeeRoleID" />
+    </Key>
+    <Property Name="EmployeeRoleID" Type="int" Nullable="false" />
+    <Property Name="EmployeeRoleName" Type="nvarchar" Nullable="false" MaxLength="512" />
+    <Property Name="EmployeeRoleDescription" Type="nvarchar" Nullable="false" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="EmployeesData">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="EmployeeRoleID" Type="int" Nullable="false" />
+    <Property Name="ReportsToEmployeeID" Type="int" />
+    <Property Name="OrganizationID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrganizationData">
+    <Key>
+      <PropertyRef Name="OrganizationID" />
+    </Key>
+    <Property Name="OrganizationID" Type="int" Nullable="false" />
+    <Property Name="OrganizationName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="OrganizationDecription" Type="nvarchar" Nullable="false" MaxLength="1024" />
+  </EntityType>
+  <Association Name="FK_EmployeesData_EmployeeRoleData">
+    <End Role="EmployeeRoleData" Type="OrganizationData_DBModel.Store.EmployeeRoleData" Multiplicity="1" />
+    <End Role="EmployeesData" Type="OrganizationData_DBModel.Store.EmployeesData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeRoleData">
+        <PropertyRef Name="EmployeeRoleID" />
+      </Principal>
+      <Dependent Role="EmployeesData">
+        <PropertyRef Name="EmployeeRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeesData_EmployeesData">
+    <End Role="EmployeesData" Type="OrganizationData_DBModel.Store.EmployeesData" Multiplicity="0..1" />
+    <End Role="EmployeesData1" Type="OrganizationData_DBModel.Store.EmployeesData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeesData">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeesData1">
+        <PropertyRef Name="ReportsToEmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeesData_OrganizationData">
+    <End Role="OrganizationData" Type="OrganizationData_DBModel.Store.OrganizationData" Multiplicity="1" />
+    <End Role="EmployeesData" Type="OrganizationData_DBModel.Store.EmployeesData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizationData">
+        <PropertyRef Name="OrganizationID" />
+      </Principal>
+      <Dependent Role="EmployeesData">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

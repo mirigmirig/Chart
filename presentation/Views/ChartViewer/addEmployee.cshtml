@@ -1,0 +1,82 @@
+﻿@model presentation.Models.ModelGroup
+ 
+@{
+    ViewBag.Title = "Add Employee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<h2>Add Employee</h2>
+
+ @if (Model != null && Model.ResponceMessage != null)
+ {
+     <div>  @Html.Label(Model.ResponceMessage) </div>  
+ }
+ 
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+ 
+    <fieldset>
+        <legend>Add Employee</legend>
+         
+        <div class="editor-label">
+            @Html.LabelFor(model => model.emp.EmployeeID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.emp.EmployeeID)
+            @Html.ValidationMessageFor(model => model.emp.EmployeeID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.emp.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.emp.FirstName)
+            @Html.ValidationMessageFor(model => model.emp.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.emp.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.emp.LastName)
+            @Html.ValidationMessageFor(model => model.emp.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.emp.EmployeeRoleID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.emp.EmployeeRoleID)
+            @Html.ValidationMessageFor(model => model.emp.EmployeeRoleID)
+        </div>
+
+         <div class="editor-label">
+            @Html.LabelFor(model => model.emp.OrganizationID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.emp.OrganizationID)
+            @Html.ValidationMessageFor(model => model.emp.OrganizationID)
+        </div>
+
+         <div class="editor-label">
+            @Html.LabelFor(model => model.emp.ReportToEmployeeID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.emp.ReportToEmployeeID)
+            @Html.ValidationMessageFor(model => model.emp.ReportToEmployeeID)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+ 
+<div>
+    @Html.ActionLink("Chart Viewer", "Index", "ChartViewer", new { Area = "" }, null)
+</div>
+ 
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

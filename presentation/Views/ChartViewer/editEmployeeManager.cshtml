@@ -1,0 +1,49 @@
+﻿@model presentation.Models.ModelGroup
+ 
+@{
+    ViewBag.Title = "Edit Employee's Manager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<h2>Edit Employee</h2>
+
+ @if (Model != null && Model.ResponceMessage != null)
+ {
+     <div>  @Html.Label(Model.ResponceMessage) </div>  
+ }
+ 
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+ 
+    <fieldset>
+        <legend>Edit Employee's Manager</legend>
+         
+        <div class="editor-label">
+            @Html.LabelFor(model => model.edit.EmployeeID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.edit.EmployeeID, Model.edit.allEmployees)
+            @Html.ValidationMessageFor(model => model.edit.EmployeeID)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.edit.ManagerID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.edit.ManagerID, Model.edit.allEmployees)
+            @Html.ValidationMessageFor(model => model.edit.ManagerID)
+        </div>
+        <p>
+            <input type="submit" value="Edit" />
+        </p>
+    </fieldset>
+}
+ 
+<div>
+    @Html.ActionLink("Chart Viewer", "Index", "ChartViewer", new { Area = "" }, null)
+</div>
+ 
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
